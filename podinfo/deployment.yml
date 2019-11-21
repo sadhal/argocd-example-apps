@@ -5,6 +5,7 @@ metadata:
   labels:
     app: podinfo
 spec:
+  replicas: 2
   minReadySeconds: 5
   revisionHistoryLimit: 5
   progressDeadlineSeconds: 60
