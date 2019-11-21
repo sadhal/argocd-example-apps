@@ -1,14 +1,24 @@
-apiVersion: v1
+apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2019-11-21T22:07:06Z"
   labels:
     app.kubernetes.io/instance: skattesatser
   name: skattesatser
 spec:
+  host: skattesatser-myproject-dev.apps-crc.testing
+  port:
+    targetPort: 8080
+  subdomain: ""
   to:
     kind: Service
     name: skattesatser
     weight: 100
-  port:
-    targetPort: 8080
   wildcardPolicy: None
+status:
+  ingress:
+    - conditions:
+        - status: 'True'
+          type: Admitted
