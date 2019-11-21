@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app.kubernetes.io/instance: skattesatser
+  name: skattesatser
+spec:
+  host: skattesatser-myproject-dev.apps-crc.testing
+  port:
+    targetPort: 8080
+  subdomain: ""
+  to:
+    kind: Service
+    name: skattesatser
+    weight: 100
+  wildcardPolicy: None
