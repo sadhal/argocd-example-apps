@@ -10,7 +10,7 @@ metadata:
 spec:
   host: skattesatser-myproject-dev.apps-crc.testing
   port:
-    targetPort: 8080
+    targetPort: 8901
   subdomain: ""
   to:
     kind: Service
