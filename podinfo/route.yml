@@ -1,0 +1,24 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2019-11-21T22:07:06Z"
+  labels:
+    app.kubernetes.io/instance: podinfo
+  name: podinfo
+spec:
+  host: podinfo-myproject-dev.apps-crc.testing
+  port:
+    targetPort: 9898
+  subdomain: ""
+  to:
+    kind: Service
+    name: podinfo
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+    - conditions:
+        - status: 'True'
+          type: Admitted
