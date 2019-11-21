@@ -4,7 +4,7 @@ metadata:
   name: skattesatser
 spec:
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 8901
+    targetPort: 8901
   selector:
     app: skattesatser
