@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/instance: podinfo
   name: podinfo
 spec:
-  host: podinfo-myproject-dev.apps-crc.testing
+  host: podinfo-myproject-fbf-team1.apps-crc.testing
   port:
     targetPort: 9898
   subdomain: ""
